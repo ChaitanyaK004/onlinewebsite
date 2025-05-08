@@ -1,72 +1,74 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>  Registration Form </title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function convertToUppercase(input) {
-        input.value = input.value.toUpperCase();
-    }
-    
-</script>
-</head>
-<body>
-  <div class="container">
-    
-    <div class="title">Form</div>
-    <div class="content">
-      
-      <form action="#">
-        <div class="user-details">
-          
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--<title>Registration Form in HTML CSS</title>-->
+    <!---Custom CSS File--->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <header>Registration Form</header>
+      <form action="#" class="form">
+        <div class="input-box">
+          <label>Full Name</label>
+          <input type="text" placeholder="Enter full name" required />
+        </div>
+        <div class="input-box">
+          <label>Email Address</label>
+          <input type="text" placeholder="Enter email address" required />
+        </div>
+        <div class="column">
           <div class="input-box">
-            <span class="details">First Name</span>
-            <input type="text" placeholder="First Name" required>
+            <label>Phone Number</label>
+            <input type="number" placeholder="Enter phone number" required />
           </div>
-
           <div class="input-box">
-            <span class="details">Middle Name</span>
-            <input type="text" placeholder="Middle Name" required>
-          </div>
-
-          <div class="input-box">
-            <span class="details">Last Name</span>
-            <input type="text" placeholder="Last Name" required>
-          </div>
-          
-          <div class="input-box">
-            <span class="details">Phone No</span>
-            <input type="tel" placeholder="Enter your phone no" required  maxlength="10">
-          </div>
-          
-          <div class="input-box">
-            <span class="details">Email</span>
-            <input type="text" placeholder="Enter your email" required>
-          </div>
-          
-          <div class="input-box">
-            <span class="details">Aadhar No</span>
-            <input type="phone" placeholder="Enter your Aadhar No" required maxlength="12">
-          </div>
-         
-          <div class="input-box">
-            <span class="textInput">Pancard</span><br>
-            <input type="text" id="textInput" name="textInput" oninput="convertToUppercase(this)" placeholder="Enter Your Pancard No" required maxlength="10">
-          </div>
-          
-          <div class="input-box">
-            <span class="details">Date Of Birth</span>
-            <input type="date"  placeholder="dd-mm-yyyy"required>
+            <label>Birth Date</label>
+            <input type="date" placeholder="Enter birth date" required />
           </div>
         </div>
-      
-        <div class="button">
-          <input type="submit" value="Register">
+        <div class="gender-box">
+          <h3>Gender</h3>
+          <div class="gender-option">
+            <div class="gender">
+              <input type="radio" id="check-male" name="gender" checked />
+              <label for="check-male">male</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-female" name="gender" />
+              <label for="check-female">Female</label>
+            </div>
+            <div class="gender">
+              <input type="radio" id="check-other" name="gender" />
+              <label for="check-other">prefer not to say</label>
+            </div>
+          </div>
         </div>
+        <div class="input-box address">
+          <label>Address</label>
+          <input type="text" placeholder="Enter street address" required />
+          <input type="text" placeholder="Enter street address line 2" required />
+          <div class="column">
+            <div class="select-box">
+              <select>
+                <option hidden>Country</option>
+                <option>America</option>
+                <option>Japan</option>
+                <option>India</option>
+                <option>Nepal</option>
+              </select>
+            </div>
+            <input type="text" placeholder="Enter your city" required />
+          </div>
+          <div class="column">
+            <input type="text" placeholder="Enter your region" required />
+            <input type="number" placeholder="Enter postal code" required />
+          </div>
+        </div>
+        <button>Submit</button>
       </form>
-    </div>
-  </div>
-</body>
+    </section>
+  </body>
 </html>
